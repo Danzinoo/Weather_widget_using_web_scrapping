@@ -18,9 +18,9 @@ img = ImageTk.PhotoImage(img)
 def getWeather():
     page = requests.get(url)
     soup = BeautifulSoup(page.content, "html.parser")
-    location = soup.find('h1',class_="CurrentConditions--location--1YWj_").text
-    temperature = soup.find('span',class_="CurrentConditions--tempValue--MHmYY").text
-    weatherPrediction = soup.find('div',class_="CurrentConditions--phraseValue--mZC_p").text
+    location = soup.find('h1', class_="CurrentConditions--location--2_osB").text
+    temperature = soup.find('span', class_="CurrentConditions--tempValue--1RYJJ").text
+    weatherPrediction = soup.find('div', class_="CurrentConditions--phraseValue--17s79").text
 
     locationLabel.config(text=location)
     temperatureLabel.config(text=temperature)
